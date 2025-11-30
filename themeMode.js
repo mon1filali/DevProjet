@@ -1,18 +1,20 @@
-//cree la fonction toggleTheme pour recuperer l'element body de la page et basculer la classe "dark-mode" sur le body pour activer ou desactiver le mode sombre et recuperer le bouton avec l'id "theme-toggle" et verifier si la classe "dark-mode" est presente sur le body au chargement de la page pour appliquer le theme correspondant et sauvegarder le theme dans le local storage pour le conserver entre les visites avec le nom theme
+//cree la fonction pour changer le theme 
 function toggleTheme() {
     const body = document.body;
     body.classList.toggle("dark-mode");
 }
+//ajoute un ecouteur d'evenement au bouton
 document.getElementById("theme-toggle").addEventListener("click", toggleTheme);
+//verifie le theme au chargement de la page
 window.addEventListener("load", () => {
-    const theme = localStorage.getItem("theme");
     const body = document.body;
-    if (theme === "dark") {
+    if (body.classList.contains("dark-mode")) {
         body.classList.add("dark-mode");
     } else {
         body.classList.remove("dark-mode");
     }
 });
+//sauvgarer le theme dans le local storage
 window.addEventListener("beforeunload", () => {
     const body = document.body;
     if (body.classList.contains("dark-mode")) {
@@ -21,6 +23,7 @@ window.addEventListener("beforeunload", () => {
         localStorage.setItem("theme", "light");
     }      
 });
+//charger le theme depuis le local storage
 window.addEventListener("load", () => {
     const theme = localStorage.getItem("theme");
     const body = document.body;
@@ -30,3 +33,29 @@ window.addEventListener("load", () => {
         body.classList.remove("dark-mode");
     }
 });
+//initialiser le theme au chargement de la page
+window.addEventListener("load", () => {
+    const theme = localStorage.getItem("theme");
+    const body = document.body;
+    if (theme === "dark") {
+        body.classList.add("dark-mode");
+    } else {
+        body.classList.remove("dark-mode");
+    }
+});
+//appliquer le theme au chargement de la page
+window.addEventListener("load", () => {
+    const theme = localStorage.getItem("theme");
+    const body = document.body;
+    if (theme === "dark") {
+        body.classList.add("dark-mode");
+    } else {
+        body.classList.remove("dark-mode");
+    }   
+});
+//recuperer le bouton theme-toggle et ajouter un evenement click qui appelle la fonction toggleTheme
+document.getElementById("theme-toggle").addEventListener("click", toggleTheme);
+
+
+
+
