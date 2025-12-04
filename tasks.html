@@ -1,37 +1,59 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quasi natus placeat error laboriosam, ducimus adipisci exercitationem. Porro incidunt quam eum eveniet excepturi dolor qui. Nobis esse dolore libero ipsam.">
+    <meta name="description"
+        content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quasi natus placeat error laboriosam, ducimus adipisci exercitationem. Porro incidunt quam eum eveniet excepturi dolor qui. Nobis esse dolore libero ipsam.">
     <title>tasks</title>
     <link rel="stylesheet" href="Styles/style.css">
     <link rel="icon" href="Assets/favicon.ico">
+    <script defer src="Scripts/script.js"></script>
+    <script defer src="Scripts/sidebar.js"></script>
+    <script defer src="Scripts/task.js"></script>
 </head>
+
 <body class="dark-mode">
+    <div id="notification-container"></div>
     <header id="head">
+        <button id="open-sidebar" class="sidebar-toggle">☰</button>
         <h1>TaskMe</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eius nisi perspiciatis magnam perferendis quo ab distinctio.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eius nisi perspiciatis magnam perferendis
+            quo ab distinctio.</p>
         <nav aria-label="Navigation principale">
             <ul>
-                <li><a href="index.html" >Acceuil</a></li>
-                <li><a href="profile.html" >Profile</a></li>
+                <li><a href="index.html">Acceuil</a></li>
+                <li><a href="profile.html">Profile</a></li>
                 <li><a href="tasks.html" aria-current="page">Tasks</a></li>
             </ul>
         </nav>
+        <button class="theme-btn" id="theme-toggle">Mode Sombre </button>
     </header>
-    <main>
+
+    <aside id="sidebar" class="sidebar">
+        <h2>Pages: </h2>
+        <ul>
+            <li><a href="index.html">Acceuil</a></li>
+            <li><a href="profile.html">Profil</a></li>
+            <li><a href="tasks.html">Taches</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
         <aside>
             <h2>Creer une tache </h2>
-            <form >
+            <form>
                 <label for="taskName">Nom:</label>
-                <input type="text" id="taskName" name="taskName" required placeholder="Nom de la tache" aria-required="true"> <br>
+                <input type="text" id="taskName" name="taskName" required placeholder="Nom de la tache"
+                    aria-required="true"> <br>
 
                 <label for="description">Description:</label>
-                <textarea id="description" name="description" required placeholder="Details de la tache" aria-required="true"></textarea> <br>
+                <textarea id="description" name="description" required placeholder="Details de la tache"
+                    aria-required="true"></textarea> <br>
 
                 <label for="dueDate">Date:</label>
-                <input type="number" id="dueDate" name="dueDate" aria-required="true"> <br>
+                <input type="date" id="dueDate" name="dueDate" aria-required="true"> <br>
 
                 <label for="remuneration">remuneration:</label>
                 <input type="number" id="remuneration" name="remuneration" aria-required="true"> <br>
@@ -42,37 +64,38 @@
                 <label for="mode">Mode d'affectation </label>
                 <select name="mode" id="mode">
                     <option value="manuel">Manuel</option>
-                     <option value="semi">semi-automatise</option> <option value="auto">Automatise</option>
+                    <option value="semi">semi-automatise</option>
+                    <option value="auto">Automatise</option>
                 </select><br>
 
                 <label for="status">Status :</label>
-                <select name="status" id="status">
+                <select name="statut" id="statut">
                     <option value="ouverte">Ouverte</option>
                     <option value="en-cours">En cours</option>
                     <option value="terminee">terminee</option>
                 </select><br>
 
-                <button type="submit">Ajouter la tache </button>
+                <button class="submit-btn" type="submit">Ajouter la tache </button>
             </form>
 
-            <table border="">
+            <table>
                 <thead>
                     <tr>
-                    <th>Nom</th>
-                    <th>Description</th>
-                    <th>Date</th>
-                    <th>Statut</th>
-                    <th>Actions</t>
+                        <th>Nom</th>
+                        <th>Description</th>
+                        <th>Date</th>
+                        <th>Statut</th>
+                        <th>Actions</t>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="taskTableBody">
                     <tr>
                         <td>Tache 1</td>
                         <td>Details de la tache 1</td>
                         <td>2024-12-31</td>
                         <td>Ouverte</td>
                         <td>
-                            <button class="danger">Supprimet</button>
+                            <button class="danger">Supprimer</button>
                             <button class="success">Editer</button>
                         </td>
                     </tr>
@@ -82,14 +105,15 @@
                         <td>2024-11-30</td>
                         <td>En cours</td>
                         <td>
-                            <button class="danger">Supprimet</button>
+                            <button class="danger">Supprimer</button>
                             <button class="success">Editer</button>
                         </td>
                     </tr>
             </table>
-            
+
         </aside>
     </main>
     <footer> Tous droits reserves &copy; 2025 - TaskMe</footer>
 </body>
+
 </html>

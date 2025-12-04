@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="Styles/style.css">
     <link rel="icon" href="Assets/favicon.ico">
     <script defer src="Scripts/script.js"></script>
+    <script defer src="Scripts/sidebar.js"></script>
 </head>
 <body class="dark-mode">
     <header id="head">
+        <button id="open-sidebar" class="sidebar-toggle">☰</button>
         <h1>TaskMe</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eius nisi perspiciatis magnam perferendis quo ab distinctio.</p>
         <nav aria-label="Navigation principale">
@@ -20,9 +22,19 @@
                 <li><a href="tasks.html">Tasks</a></li>
             </ul>
         </nav>
-        <button class="theme-btn" id="theme-toggle">Mode Sombre </button>   
+        <button  class="theme-btn" id="theme-toggle">Mode Sombre </button>   
     </header>
-    <main>
+
+    <aside id="sidebar" class="sidebar">
+        <h2>Pages: </h2>
+        <ul>
+            <li><a href="index.html">Acceuil</a></li>
+            <li><a href="profile.html">Profil</a></li>
+            <li><a href="tasks.html">Taches</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
         <section>
             <h2>Présentation de Taskme</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus error magni quae numquam necessitatibus. Corporis modi saepe molestias aliquam minus voluptas voluptate vel ut. Eos hic possimus ipsum laborum nulla?</p>
@@ -42,7 +54,7 @@
             </ol>
 
             <figure>
-                <img src="images/taskeme.png" alt="illustration de le task" width="600">
+                <img src="Assets/taskeme.png" alt="illustration de le task" width="600">
                 <figcaption>TaskMe if you can</figcaption>
                 <a href="#head">retour</a>
             </figure>
