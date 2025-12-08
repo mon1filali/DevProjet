@@ -1,0 +1,44 @@
+header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: var(--spacing);
+    box-shadow: var(--shadow);
+    text-align: center;
+
+}
+
+h1 {
+    font-size: var(--font-size-title);
+    margin-bottom: 0.5rem;
+
+}
+
+p {
+    font-weight: 500;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+
+}
+
+nav ul li a {
+    color: var(--bg-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav ul li a[aria-current="page"] {
+    font-weight: 700;
+    text-decoration: underline;
+    color: var(--accent-color);
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,44 @@
+{
+  "tasks": [
+    {
+      "taskName": "Livraison de colis",
+      "description": "Livrer un petit colis à l'adresse indiquée dans le centre-ville.",
+      "dueDate": "2025-12-10",
+      "remuneration": "15",
+      "vehicle": true,
+      "mode": "manuel",
+      "taskStatus": "ouverte",
+      "id": "bd21aa76-01fb-4b6f-9eae-4e0f8232f200"
+    },
+    {
+      "id": "e1fbcf97-9519-4876-b123-1c30e292a621",
+      "taskName": "Montage de meuble",
+      "description": "Monter une petite étagère IKEA dans un appartement.",
+      "dueDate": "2025-12-05",
+      "remuneration": "25",
+      "vehicle": false,
+      "mode": "manuel",
+      "taskStatus": "ouverte"
+    },
+    {
+      "id": "78c4aec1-37f8-4dd2-bb9b-a3d3b844372a",
+      "taskName": "Aide aux courses",
+      "description": "Accompagner une personne âgée pour faire ses courseshebdomadaires.",
+      "dueDate": "2025-12-02",
+      "remuneration": "18",
+      "vehicle": true,
+      "mode": "manuel",
+      "taskStatus": "ouverte"
+    },
+    {
+      "taskName": "cscs",
+      "description": "jhsbcfjshb",
+      "dueDate": "2005-02-02",
+      "remuneration": 500,
+      "vehicle": "cscs",
+      "mode": "auto",
+      "taskStatus": "cscs",
+      "id": "0103"
+    }
+  ]
+}
